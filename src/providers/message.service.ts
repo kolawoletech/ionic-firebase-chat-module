@@ -20,7 +20,7 @@ export class MessageService extends BaseService {
     super();
   }
 
-  create(message: Message, listMessages: AngularFireList<Message>): Promise<void> {
+  create(message: Message, listMessages: AngularFireList<Message>): Promise<any> {
     return Promise.resolve(listMessages.push(message));
   }
 
