@@ -43,9 +43,9 @@ export class UserProfilePage {
     
     if (this.filePhoto) {
 
-      let uploadTask = this.userService.uploadPhoto(this.filePhoto, this.currentUser.$key);
+      //let uploadTask = this.userService.uploadPhoto(this.filePhoto, this.currentUser.$key);
 
-      uploadTask.on('state_changed', (snapshot: firebase.storage.UploadTaskSnapshot) => {
+/*       uploadTask.on('state_changed', (snapshot: firebase.storage.UploadTaskSnapshot) => {
 
         this.uploadProgress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
 
@@ -55,7 +55,7 @@ export class UserProfilePage {
 
       uploadTask.then((UploadTaskSnapshot: firebase.storage.UploadTaskSnapshot) => {
         this.editUser(uploadTask.snapshot.downloadURL);
-      });
+      }); */
 
     } else {
       this.editUser();
